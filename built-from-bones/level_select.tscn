@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b7qcvil1lrn8n"]
+
+[ext_resource type="Texture2D" uid="uid://cbdorcp7ouu55" path="res://White square.png" id="1_vomi7"]
+[ext_resource type="Script" uid="uid://c5t3kthbpnldq" path="res://touchdown.gd" id="2_wevku"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vomi7"]
+
+[node name="Node2D" type="Node2D" unique_id=637695814]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2004833392]
+offset_left = -622.0
+offset_top = -379.0
+offset_right = 627.0
+offset_bottom = 355.0
+texture = ExtResource("1_vomi7")
+
+[node name="Button" type="Button" parent="." unique_id=444477264]
+offset_left = -575.0
+offset_top = -333.0
+offset_right = -243.0
+offset_bottom = -255.0
+text = "Touchdown"
+script = ExtResource("2_wevku")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1083446736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1305491678]
+position = Vector2(0, 30)
+shape = SubResource("WorldBoundaryShape2D_vomi7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=549522722]
